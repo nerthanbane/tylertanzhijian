@@ -1,0 +1,181 @@
+body {
+  background-color: #1C1C1C;
+}
+*{
+  cursor: default;
+}
+.scrible{
+  color: grey;
+  font-size: 15px;
+  margin: 0px 0px 0px 170px;
+  font-family: Lucida Handwriting;
+  clear: left;
+  animation: fadeIn 5s;
+  opacity: 0.5;
+}
+
+.scrible_h1{
+  color: grey;
+  font-size: 15px;
+  margin: 170px 0px 0px 0px;
+  font-family: Lucida Handwriting;
+  float: left;
+  animation: fadeIn 5s;
+  opacity: 0.5;
+}
+
+.intro{
+  color: white;
+  font-size: 90px;
+  margin: 0px 0px 0px 10px;
+  font-family: Georgia;
+  float: left;
+}
+
+.small_intro{
+  color: white;
+  opacity: 0.6;
+  font-size: 20px;
+  margin: 0px 0px 0px 180px;
+  font-family: Lucida Console;
+  clear: left;
+  animation: fadeIn 5s;
+  opacity: 0.5;
+}
+
+
+.sidebar{
+  margin: 0px ;
+  padding: 0;
+  width: 120px;
+  background-color:#151515;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-family:"Arial"
+}
+
+.sidebar a {
+  display: block;
+  color: grey;
+  padding: 5px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sidebar a.active {
+  background-color: black;
+  color:grey;
+}
+
+.sidebar a:hover:not(.active) {
+  color: teal;
+}
+
+div.content {
+  margin-left: 0px;
+  padding: 0px;
+  height: 1000px;
+}
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: auto;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0px;}
+}
+
+@media screen and (max-width: 300px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+hr.solid {
+  border-top: 1px solid #1C1C1C;
+  opacity:0.1;
+}
+
+.button {
+  margin: 0px 0px 0px 180px;
+  border: 2px solid teal;
+  color: aqua;
+  background-color:  #1C1C1C;
+  padding: 20px 40px;
+  text-decoration: none;
+  display: inline-block;
+  transition: 2s;
+  font-size: 20px;
+  font-family:Courier New;
+  cursor: pointer;
+}
+
+.button1:hover {
+  transition-duration: 0.5s;
+  background-color: aqua;
+  color:black;
+}
+
+.intro{
+  animation: pop 3s ease forwards;
+}
+
+.portfolio{
+  color: aqua;
+  font-family: "Verdana";
+  font-weight: 900;
+  word-spacing: 0px;
+  opacity: 1;
+  font-size: 70px;
+  margin: 0px 0px 0px 180px;
+  font-family: Lucida Console;
+  clear: left;
+  animation: fadeIn 3s;
+
+}
+span {
+  display:inline-block;
+  padding:0;
+  margin: 0 -20px 0 -4px;
+  user-select: none !important;
+  transition:0.3s;
+}
+
+span.space {
+  padding: 0 5px !important;
+  margin:0 1px;
+}
+span.letter:hover {
+  animation: jump 1.5s;
+}
+
+span.letters:hover {
+  animation: change_color 0.5s;
+  color:aqua;
+}
+@keyframes change_color {
+  0% {transform: translateY(0px) rotate(0deg) ;;}
+  100% {transform: translateY(0px) rotate(360deg);}
+}
+@keyframes jump {
+  0% {transform: translateY(0px) rotate(0deg) ;;}
+  25% {transform: translateY(-100px) rotate(180deg);;}
+  50% {transform: translateY(0px) rotate(360deg);;}
+  75% {transform: translateY(0px) rotate(360deg);;}
+  100% {transform: translateY(0px) rotate(360deg);;}
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:0.5;}
+}
+
+@keyframes pop{
+  0%{transform:translateX(-200px)}
+  70%{transform:translateX(100px)}
+  100%{transform:translateX(0px)}
+}
