@@ -29,6 +29,7 @@ body {
   font-size: 90px;
   margin: 0px 0px 0px 10px;
   font-family: Georgia;
+  font-weight: bold;
   float: left;
 }
 
@@ -108,10 +109,11 @@ hr.solid {
   padding: 20px 40px;
   text-decoration: none;
   display: inline-block;
-  transition: 2s;
   font-size: 20px;
   font-family:Courier New;
   cursor: pointer;
+  animation-delay: 3s;
+  animation: popfadeIn 3s ease forwards;
 }
 
 .button1:hover {
@@ -130,7 +132,7 @@ hr.solid {
   font-weight: 900;
   word-spacing: 0px;
   opacity: 1;
-  font-size: 70px;
+  font-size: 50px;
   margin: 0px 0px 0px 180px;
   font-family: Lucida Console;
   clear: left;
@@ -157,6 +159,22 @@ span.letters:hover {
   animation: change_color 0.5s;
   color:aqua;
 }
+
+.scroll{
+  writing-mode: vertical-lr;
+  color: white;
+  font-size: 15;
+  margin-left: 120px;
+  opacity:0.6;
+  animation: upanddown 2s linear infinite;
+}
+
+
+@keyframes upanddown {
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(15px);}
+  100%{transform: translateY(0px);}
+}
 @keyframes change_color {
   0% {transform: translateY(0px) rotate(0deg) ;;}
   100% {transform: translateY(0px) rotate(360deg);}
@@ -174,8 +192,20 @@ span.letters:hover {
   100% {opacity:0.5;}
 }
 
+
+@keyframes linearwipe{
+  from { width: 0; }
+}
+
 @keyframes pop{
-  0%{transform:translateX(-200px)}
-  70%{transform:translateX(100px)}
-  100%{transform:translateX(0px)}
+  0%{transform:translateX(-200px); opacity:0;}
+  70%{transform:translateX(100px); opacity:0.7;}
+  100%{transform:translateX(0px); opacity:1;}
+}
+
+@keyframes popfadeIn{
+  0%{transform: translateY(100px); opacity: 0;}
+  50%{transform: translateY(100px); opacity: 0;}
+  85%{transform: translateY(-20px); opacity: 0.8;}
+  100%{transform:translateY(0px); opacity: 1;}
 }
